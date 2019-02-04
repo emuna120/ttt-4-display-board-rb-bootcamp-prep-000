@@ -44,7 +44,7 @@ def two_dimentional_board(board_to_change)
     else
       new_board << new_line
       new_line = []
-      ew_line << ele
+      new_line << ele
     end
   end
   new_board
