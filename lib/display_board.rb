@@ -33,7 +33,7 @@ def two_dimentional_board(board_to_change)
   
   num_of_ele_on_line = get_num_of_eles_per_line(board_to_change)
   
-  while i < board_to_change.length
+  board_to_change.each
       new_line = []
       until new_board.map(&:length) == num_of_ele_on_line
         new_line << board_to_change[i]
