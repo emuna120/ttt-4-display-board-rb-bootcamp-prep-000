@@ -8,8 +8,6 @@ def display_board(board)
   hirzontal_line = '-'
   num_of_h_lines = 11
   
-  our_new_board = []
-  
   num_of_ele_on_line = get_num_of_eles_per_line(board)
 
   total_horizontal_lines  = hirzontal_line * num_of_h_lines
@@ -34,7 +32,7 @@ def two_dimentional_board(board_to_change)
   
   num_of_ele_on_line = get_num_of_eles_per_line(board_to_change)
   
-  until i < board_to_change.length
+  while i < board_to_change.length
       new_line = []
       until new_board.map(&:length) == num_of_ele_on_line
         new_line << board_to_change[i]
