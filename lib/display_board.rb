@@ -17,9 +17,9 @@ def display_board(board)
   
   
   our_new_board.each.with_index do |line_of_board, idx_of_line| 
-    line_of_board.each.with_index do |place_on_board, idx|
+    line_of_board.each.with_index do |place_on_board, idx_of_place|
       print "#{space_between_chars}#{place_on_board}#{space_between_chars}"
-      print "#{vertical_line}" unless idx == (num_of_ele_on_line - 1)
+      print "#{vertical_line}" unless idx_of_place == (num_of_ele_on_line - 1)
     end
     print "\n"
     puts "#{total_horizontal_lines}" unless
