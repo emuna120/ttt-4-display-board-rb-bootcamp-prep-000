@@ -6,7 +6,7 @@ def display_board(board)
   vertical_line = '|'
   space_between_chars = ' '
   hirzontal_line = '-'
-  num_of_h_lines = 11
+  num_of_h_lines = nu
   
   num_of_ele_on_line = get_num_of_eles_per_line(board)
 
