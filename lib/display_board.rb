@@ -6,10 +6,11 @@ def display_board(board)
   vertical_line = '|'
   space_between_chars = ' '
   horizontal_line = '-'
+  squared = 2
   
   num_of_ele_on_line = get_num_of_eles_per_line(board)
   
-  num_of_h_lines = ((num_of_ele_on_line + horizontal_line.length) ** 2) - 1
+  num_of_h_lines = ((num_of_ele_on_line ** squared) + (horizontal_line.length * squared)
   total_horizontal_lines  = horizontal_line * num_of_h_lines
   
   our_new_board = two_dimentional_board(board) 
