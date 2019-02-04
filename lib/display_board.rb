@@ -21,7 +21,7 @@ def display_board(board)
       print "#{space_between_chars}#{place_on_board}#{space_between_chars}"
       print "#{space_between_chars}#{vertical_line}#{space_between_chars}" unless idx == (num_of_ele_on_line - 1)
     end
-    puts
+    print "\n"
     puts "#{total_horizontal_lines}"
   end
   
