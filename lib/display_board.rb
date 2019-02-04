@@ -22,7 +22,7 @@ def display_board(board)
       print "#{vertical_line}" unless idx_of_place == (num_of_ele_on_line - 1)
     end
     print "\n"
-    puts "#{total_horizontal_lines}" unless
+    puts "#{total_horizontal_lines}" unless idx_of_line == (num_of_ele_on_line - 1)
   end
   
 end 
