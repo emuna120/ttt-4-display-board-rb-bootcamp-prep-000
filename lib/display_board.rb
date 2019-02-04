@@ -29,17 +29,16 @@ end
   
 def two_dimentional_board(board_to_change)
   new_board =  []
-  i = 0
+  
   
   num_of_ele_on_line = get_num_of_eles_per_line(board_to_change)
   
   board_to_change.each do |ele|
-      new_line = []
-      until new_board.map(&:length) == num_of_ele_on_line
-        new_line << ele
-        i += 1
-      end
-      new_board << new_line
+    new_line = []
+    until new_board.map(&:length) == num_of_ele_on_line
+      new_line << ele
+    end
+    new_board << new_line
   end
   new_board
 end 
