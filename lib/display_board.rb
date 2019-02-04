@@ -35,7 +35,7 @@ def two_dimentional_board(board_to_change)
   
   board_to_change.each do |ele|
     new_line = []
-    until new_board.map(&:length) == num_of_ele_on_line
+    while new_board.map(&:length) <= num_of_ele_on_line
       new_line << ele
     end
     new_board << new_line
