@@ -29,16 +29,21 @@ end
   
 def two_dimentional_board(board_to_change)
   new_board =  []
-  
+  new_line = []
+
   
   num_of_ele_on_line = get_num_of_eles_per_line(board_to_change)
   
+  idx = 0
+  
   board_to_change.each do |ele|
-    new_line = []
-    while (new_board.map(&:length)) num_of_ele_on_line
+    
+    if new_line.length < num_of_ele_on_line
       new_line << ele
-    end
+    else
     new_board << new_line
+    new_line = []
+  end
   end
   new_board
 end 
