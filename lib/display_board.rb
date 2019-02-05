@@ -27,20 +27,22 @@ def display_board(board)
   
 end 
  
-  
 def two_dimentional_board(board_to_change)
   new_board =  []
   new_line = []
 
-  
   num_of_ele_on_line = get_num_of_eles_per_line(board_to_change)
-  
 
-  
-  board_to_change.each do |ele|
+  board_to_change.each.with_index  do |ele, idx_of_ele|
     
-    if new_line.length < num_of_ele_on_line
+    if idx_of_ele == (board_to_change.length - 1)
       new_line << ele
+      new_board << new_line
+      new_line = []
+      
+    elsif new_line.length < num_of_ele_on_line
+      new_line << ele
+
     else
       new_board << new_line
       new_line = []
@@ -48,7 +50,7 @@ def two_dimentional_board(board_to_change)
     end
   end
   new_board
-end 
+end
 
 def get_num_of_eles_per_line(board_arr)
   num_of_eles_per_line = CMath.sqrt(board_arr.length)
