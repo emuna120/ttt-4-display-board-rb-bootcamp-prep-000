@@ -185,7 +185,7 @@ describe "#display_board in 'lib/display_board.rb" do
 
       # *** Comment the line below by adding a # at the line start ***
       # expect(true).to be(true)
-    end
+    
 
     it 'prints an entire board full of Os' do
       
