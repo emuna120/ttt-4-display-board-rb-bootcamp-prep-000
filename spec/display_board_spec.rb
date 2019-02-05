@@ -189,16 +189,16 @@ describe "#display_board in 'lib/display_board.rb" do
 
     it 'prints an entire board full of Os' do
       
-      board = ["O","X","X","X","X","X","X","X","X"]
+      board = ["O","O","O","O","O","O","O","O","O"]
 
       output = capture_puts{ display_board(board) }
       rows = output.split("\n")
 
-      expect(rows[0]).to eq(" X | X | X ")
+      expect(rows[0]).to eq(" O | O | O ")
       expect(rows[1]).to eq("-----------")
-      expect(rows[2]).to eq(" X | X | X ")
+      expect(rows[2]).to eq(" O | O | O ")
       expect(rows[3]).to eq("-----------")
-      expect(rows[4]).to eq(" X | X | X ")
+      expect(rows[4]).to eq(" O | O | O ")
     end
 
       # Can you copy the syntax of the tests above to write a test for a board
