@@ -137,6 +137,18 @@ describe "#display_board in 'lib/display_board.rb" do
     end
 
     it 'prints an entire board full of Xs' do
+      board = ["X"," "," "," "," "," "," "," "," "]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq("   |   |   ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq("   |   |   ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq("   |   |   ")
+    end
+
       # Should you want to write your own test for this situation,
       # read the following code and comments.
 
